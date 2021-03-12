@@ -1,0 +1,45 @@
+CREATE TABLE `fornecedores` (
+  `idFornec` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(70) NOT NULL,
+  `telefone` varchar(20) DEFAULT NULL,
+  `rua` varchar(45) DEFAULT NULL,
+  `numero` varchar(5) DEFAULT NULL,
+  `complemento` varchar(30) DEFAULT NULL,
+  `cep` varchar(9) DEFAULT NULL,
+  `bairro` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idFornec`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4
+
+CREATE TABLE `produtos` (
+  `idProd` int(11) NOT NULL AUTO_INCREMENT,
+  `fk_idFornec` int(11) NOT NULL,
+  `nome` varchar(80) NOT NULL,
+  `preco` decimal(5,2) NOT NULL,
+  `qtd` int(11) NOT NULL,
+  `data_aquisicao` date DEFAULT NULL,
+  `descricao` text DEFAULT NULL,
+  PRIMARY KEY (`idProd`),
+  KEY `idFornec` (`fk_idFornec`),
+  CONSTRAINT `idFornec` FOREIGN KEY (`fk_idFornec`) REFERENCES `fornecedores` (`idFornec`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4
+
+CREATE TABLE `vendas` (
+  `idVenda` int(11) NOT NULL AUTO_INCREMENT,
+  `dataVenda` datetime DEFAULT NULL,
+  `precoTotal` decimal(5,2) NOT NULL,
+  PRIMARY KEY (`idVenda`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4
+
+CREATE TABLE `produtos_vendas` (
+  `idpv` int(11) NOT NULL AUTO_INCREMENT,
+  `fk_idVenda` int(11) NOT NULL,
+  `fk_idProd` int(11) DEFAULT NULL,
+  `qtd` int(11) NOT NULL,
+  `precoUni` decimal(5,2) NOT NULL,
+  `nomeProd` varchar(80) NOT NULL,
+  PRIMARY KEY (`idpv`),
+  KEY `fk_codProd` (`fk_idProd`),
+  KEY `fk_codVenda` (`fk_idVenda`),
+  CONSTRAINT `fk_codProd` FOREIGN KEY (`fk_idProd`) REFERENCES `produtos` (`idProd`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `fk_codVenda` FOREIGN KEY (`fk_idVenda`) REFERENCES `vendas` (`idVenda`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4
