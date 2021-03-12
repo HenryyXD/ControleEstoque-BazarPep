@@ -1,0 +1,6 @@
+C:\Users\Pichau\source\repos\SistemaBazarPep\DTO\bin\Debug\DTO.dll
+C:\Users\Pichau\source\repos\SistemaBazarPep\DTO\bin\Debug\DTO.pdb
+C:\Users\Pichau\source\repos\SistemaBazarPep\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\Pichau\source\repos\SistemaBazarPep\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\Pichau\source\repos\SistemaBazarPep\DTO\obj\Debug\DTO.dll
+C:\Users\Pichau\source\repos\SistemaBazarPep\DTO\obj\Debug\DTO.pdb

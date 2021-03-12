@@ -1,0 +1,6 @@
+C:\Users\Pichau\source\repos\SistemaBazarPep\Exceptions\bin\Debug\Exceptions.dll
+C:\Users\Pichau\source\repos\SistemaBazarPep\Exceptions\bin\Debug\Exceptions.pdb
+C:\Users\Pichau\source\repos\SistemaBazarPep\Exceptions\obj\Debug\Exceptions.csprojAssemblyReference.cache
+C:\Users\Pichau\source\repos\SistemaBazarPep\Exceptions\obj\Debug\Exceptions.csproj.CoreCompileInputs.cache
+C:\Users\Pichau\source\repos\SistemaBazarPep\Exceptions\obj\Debug\Exceptions.dll
+C:\Users\Pichau\source\repos\SistemaBazarPep\Exceptions\obj\Debug\Exceptions.pdb
